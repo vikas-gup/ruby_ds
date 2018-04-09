@@ -26,16 +26,16 @@ class Tree
 
   def inOrderTraverse(root= @root)
     if root != nil
-      preOrderTraverse root.left
+      inOrderTraverse root.left
       puts root.val
-      preOrderTraverse root.right
+      inOrderTraverse root.right
     end
   end
 
   def postOrderTraverse(root= @root)
     if root != nil
-      preOrderTraverse root.left
-      preOrderTraverse root.right
+      postOrderTraverse root.left
+      postOrderTraverse root.right
       puts root.val
     end
   end
